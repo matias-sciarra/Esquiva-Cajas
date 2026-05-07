@@ -194,6 +194,7 @@ GameObject:
   - component: {fileID: 494779076}
   - component: {fileID: 494779075}
   - component: {fileID: 494779079}
+  - component: {fileID: 494779080}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -285,6 +286,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3bef8d89e7482346813ef2373c75a0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &494779080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 494779074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7978e78bf8486d4c9f26eb6f1b2c0fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &534669902
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,7 +374,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.32, y: 3.58, z: -6.5}
+  m_LocalPosition: {x: 0.32, y: 3.58, z: -7.456}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -380,9 +393,11 @@ GameObject:
   - component: {fileID: 604946194}
   - component: {fileID: 604946193}
   - component: {fileID: 604946197}
+  - component: {fileID: 604946198}
+  - component: {fileID: 604946199}
   m_Layer: 0
   m_Name: Cubo matador
-  m_TagString: Untagged
+  m_TagString: Caja
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -453,7 +468,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 604946192}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.21, y: 6.64, z: -0.136662}
+  m_LocalPosition: {x: 0.21, y: 8.11, z: -0.136662}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -472,6 +487,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   VelCaja: 4
+  AumentoVelocidad: 0.05
+--- !u!54 &604946198
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604946192}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.001
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
+--- !u!114 &604946199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604946192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fc93c38679f2ca449b96cdeba2b79f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cajaMovementScript: {fileID: 0}
 --- !u!1 &1961797148
 GameObject:
   m_ObjectHideFlags: 0
@@ -485,8 +530,8 @@ GameObject:
   - component: {fileID: 1961797150}
   - component: {fileID: 1961797149}
   m_Layer: 0
-  m_Name: Plane
-  m_TagString: Untagged
+  m_Name: piso
+  m_TagString: Suelo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
