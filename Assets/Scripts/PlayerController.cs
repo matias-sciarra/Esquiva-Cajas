@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    int Posicion = 2;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,11 +16,20 @@ public class PlayerController : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
         {
-            transform.Translate(2,0,0);
+            if(Posicion < 3)
+            {
+                transform.Translate(2,0,0);
+                Posicion += 1;
+            }
+            
         }
         else if(Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
         {
-            transform.Translate(-2,0,0);
+            if (Posicion > 1)
+            {
+                transform.Translate(-2,0,0);
+                Posicion -= 1;
+            }
         }
     }
 }
