@@ -5,7 +5,7 @@ using UnityEngine;
 public class CajaMovement : MonoBehaviour
 {
     public float VelCaja = 0.1f;
-    public float AumentoVelocidad = 0.1f;
+    public float AumentoVelocidad = 0.25f;
     float initialYValue;
     // Start is called before the first frame update
     void Start()
