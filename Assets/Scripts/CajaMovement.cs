@@ -16,7 +16,7 @@ public class CajaMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        VelCaja += AumentoVelocidad;
+       
         transform.Translate(0, -VelCaja * Time.deltaTime, 0);
         
     }
@@ -39,5 +39,6 @@ public class CajaMovement : MonoBehaviour
          }
         newPosition.y = initialYValue;
         transform.position = newPosition;
+         VelCaja += AumentoVelocidad;
     }
 }

@@ -5,8 +5,9 @@ using TMPro;
 
 public class PuntosManager : MonoBehaviour
 {
-    public TextMeshProUGUI textodepuntos;
-    float puntos = 0f;
+    public TextMeshProUGUI textodetiempo;
+    float tiempo = 0f;
+    public bool jugando = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +17,10 @@ public class PuntosManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        puntos += 0.025f;
-        textodepuntos.text = "puntos: " + puntos.ToString();
+        if (jugando == true)
+        {
+        tiempo += Time.deltaTime;
+        textodetiempo.text = "Tiempo: " + tiempo.ToString("F2") + "s";
+        }
     }
 }
